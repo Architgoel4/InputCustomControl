@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mLL-GI-3Wd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Controls-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-in-Lti" userLabel="Log In">
+                                <rect key="frame" x="109" y="519" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="csF-BD-X2c"/>
+                                    <constraint firstAttribute="height" constant="30" id="qLk-vN-1Xj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="attempLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6y-CN-xe3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-Wa-CfM">
+                                <rect key="frame" x="144" y="125" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="QL7-eG-3mt"/>
+                                    <constraint firstAttribute="height" constant="88" id="np0-r1-k3N"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-bi-TfZ">
+                                <rect key="frame" x="87" y="287" width="200" height="92"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-lM-W4T" userLabel="Email" customClass="LogInField" customModule="CustomControls" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useForEmail" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crG-RU-Jem" userLabel="Password" customClass="LogInField" customModule="CustomControls" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="52" width="200" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useForEmail" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jby-bi-TfZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5ss-CN-bjf"/>
+                            <constraint firstItem="cNj-Wa-CfM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="dOV-c7-MKs">
+                                <variation key="heightClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="cNj-Wa-CfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3V-w1-7ha"/>
+                            <constraint firstItem="Jby-bi-TfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i17-2J-rrA"/>
+                            <constraint firstItem="Pg4-in-Lti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ql8-AS-U2j"/>
+                            <constraint firstItem="Pg4-in-Lti" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-118" id="tGG-Jf-Jx8">
+                                <variation key="heightClass=compact" constant="-20"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Controls" id="6kg-QZ-Pt5"/>
+                    <connections>
+                        <outlet property="btnLogIn" destination="Pg4-in-Lti" id="2EQ-Xh-GQ8"/>
+                        <outlet property="emailLoginField" destination="9HY-lM-W4T" id="OmN-Ag-NUV"/>
+                        <outlet property="imgAvatar" destination="cNj-Wa-CfM" id="gGK-q5-bH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-399.85007496251876"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YEW-ws-B0d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mLL-GI-3Wd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bkq-Rh-q9t">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3xg-vv-VeC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEi-tn-I2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="-399"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Avatar" width="414" height="414"/>
+    </resources>
+</document>
